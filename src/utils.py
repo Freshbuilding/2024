@@ -5,6 +5,7 @@ from sklearn.metrics import r2_score
 from sklearn.model_selection import GridSearchCV
 from src.exception import CustomException
 
+
 def save_object(file_path, obj):
     """
     Saves an object to a specified file path using pickle.
@@ -18,6 +19,7 @@ def save_object(file_path, obj):
             pickle.dump(obj, file_obj)
     except Exception as e:
         raise CustomException(str(e), sys.exc_info())
+
 
 def evaluate_models(X_train, y_train, X_test, y_test, models, param):
     """
@@ -44,6 +46,7 @@ def evaluate_models(X_train, y_train, X_test, y_test, models, param):
         return report
     except Exception as e:
         raise CustomException(str(e), sys.exc_info())
+
 
 def load_object(file_path):
     """
