@@ -3,7 +3,7 @@ import os
 import logging
 
 # Create a log file name with the current timestamp
-log_file_name = f"{datetime.now().strftime('%Y_%m_%d_%H_%M_%S')}.log"
+log_file_name = f"{datetime.now().strftime('%Y_%m_%d-%H_%M_%S')}.log"
 
 # Construct the logs path. Using 'os.path.join' ensures compatibility across operating systems
 logs_path = os.path.join(os.getcwd(), "logs")

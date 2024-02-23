@@ -8,6 +8,7 @@ from setuptools import find_packages, setup
 
 HYPEN_E_DOT = '-e .'
 
+
 def get_requirements(file_path: str) -> List[str]:
     '''
     This function returns the list of requirements from a requirements file.
@@ -18,13 +19,14 @@ def get_requirements(file_path: str) -> List[str]:
 
     return requirements
 
+
 requirements_file_path = 'requirements.txt'
 
 
 setup(
-    name = '2024',
-    version = '0.0.1',
-    author = 'Vincent',
-    packages = find_packages(),
+    name='2024',
+    version='0.0.1',
+    author='Vincent',
+    packages=find_packages(),
     install_requires=get_requirements(requirements_file_path)
 )
